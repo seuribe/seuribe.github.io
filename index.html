@@ -11,24 +11,37 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Sebastian" startnode="1" creator="Twine" creator-version="2.2.1" ifid="E5C0501F-19E3-4A0F-AB89-329F9044DC8D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
-</script><tw-passagedata pid="1" name="About Me" tags="" position="430,48" size="100,100">Welcome! My name is Sebastian Uribe, and I&#39;m... someone who would prefer not to use a label to describe himself, but rather invite you to check out [[Who am I]], [[What I&#39;ve done]], and [[What I do now]].
+<tw-storydata name="Sebastian" startnode="1" creator="Twine" creator-version="2.2.1" ifid="E5C0501F-19E3-4A0F-AB89-329F9044DC8D" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-Also, [[What can I do for you]] (if anything!)
+body, tw-story
+{
+  font-family: Montserrat;
+  font-size: 20px;
+  color: #F0E0D0;
+  background-color: #103030;
+}
 
-Finally, [[How can you contact me]].
+tw-link {
+  color: #E0A080;
+  text-decoration: underline;
+} </style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</script><tw-passagedata pid="1" name="About Me" tags="" position="430,48" size="100,100">Welcome
 
-(this website is made with [[Twine|http://twinery.org/]], a very handy game making tool)</tw-passagedata><tw-passagedata pid="2" name="Who am I" tags="" position="112,337" size="100,100">My name is Sebastian Uribe. I&#39;m originally from Buenos Aires, Argentina, where I did many things: studied Computer Science, started two companies, taught Computer Graphics for Software Engineers, co-created the Argentine Videogames Developers Association, and more.
+I find that describing people with labels (such as *software developer*, *artist* or *educator*) is a little limiting, so instead of using them for myself, I invite you to check out [[Who I am]], [[What I&#39;ve done]], and [[What I do now]]. For those who find it relevant, you can also read about my [[Academic Background]]. There&#39;s also a bit on [[My Business and Industry Background]].
+
+Maybe you arrived to this place looking for help with something. If so, check then [[How can I help you]] and if you decide to get in touch, here you can find [[How can you contact me]]. But before doing so, **please** [[Read This First]].
+
+(BTW, this website is made with [[Twine|http://twinery.org/]], a very handy game making tool)
+</tw-passagedata><tw-passagedata pid="2" name="Who I am" tags="" position="112,337" size="100,100">My name is Sebastian Uribe. I&#39;m originally from Buenos Aires, Argentina, where I did many things: studied Computer Science, started two companies, taught Computer Graphics for Software Engineers, co-created the Argentine Videogames Developers Association, and more.
 
 I live since 2012 in Berlin, where I do things that are somewhat related to the ones above, but caring more about the environment, politics and activism.
 
-You can find a more &quot;professional&quot; profile on [[Linkedin-&gt;https://www.linkedin.com/in/sebastianuribe/]]</tw-passagedata><tw-passagedata pid="3" name="What I&#39;ve done" tags="" position="240,428" size="100,100">A couple different things!
+You can find a more &quot;professional&quot; profile on [[Linkedin-&gt;https://www.linkedin.com/in/sebastianuribe/]]</tw-passagedata><tw-passagedata pid="3" name="What I&#39;ve done" tags="" position="235,384" size="100,100">What have I done? Among many other things:
+
 [[Some games I&#39;ve made]] (and [[Other projects where I programmed stuff]]
 
-[[Some talks I&#39;ve given]]
-
-[[Things in which I participate]] (or that I organize myself)</tw-passagedata><tw-passagedata pid="4" name="What I do now" tags="" position="386,327" size="100,100">I work at [[IMAGINARY|https://www.imaginary.org]] on many things, but mainly doing some technical supervision of the [[HOLO-MATH|http://www.holo-math.com]] project, doing workshops, roadshows, and organizing exhibitions with a special focus on the African continent.
+[[Some talks I&#39;ve given]], and [[Some things I&#39;ve written]]
+</tw-passagedata><tw-passagedata pid="4" name="What I do now" tags="" position="399,282" size="100,100">I work at [[IMAGINARY|https://www.imaginary.org]] on many things, but mainly doing some technical supervision of the [[HOLO-MATH|http://www.holo-math.com]] project, doing workshops, roadshows, and organizing exhibitions with a special focus on the African continent.
 
 I also do freelance software development, mainly with Unity, but also Java and a some other tools.
 
@@ -36,11 +49,13 @@ I organize events and workshop. I&#39;ve been the Workshop Coordinator at the [[
 
 I also give talks and do workshops, mainly about games and their use as tools for activism.
 
-If some of that sounds like what you&#39;re looking for, [[drop me a line!-&gt;How can you contact me]]</tw-passagedata><tw-passagedata pid="5" name="What can I do for you" tags="" position="562,337" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="How can you contact me" tags="" position="761,355" size="100,100">The easiest way is to send me an email: suribe (at) gmail.com
+If some of that sounds like what you&#39;re looking for, [[drop me a line!-&gt;How can you contact me]]</tw-passagedata><tw-passagedata pid="5" name="How can I help you" tags="" position="562,337" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="6" name="How can you contact me" tags="" position="761,355" size="100,100">The easiest way is to send me an email: suribe (at) gmail.com. Please don&#39;t use it if you are a spamming robot.
+You can write to me in English, Spanish, Portuguese or German, but I can only promise to answer in one of the first two.
 
-You can also try to reach me through [[twitter|https://twitter.com/suribe]]
+You can also try to reach me through [[twitter|https://twitter.com/suribe]]</tw-passagedata><tw-passagedata pid="7" name="Some games I&#39;ve made" tags="" position="104,576" size="100,100">**As Inmune Games**
+Between 2003 and 2008, I developed many Java Micro Edition games for pre-iphone mobile devices. J2ME has not aged well, and is mostly unsuported everywhere, so unfortunatly there&#39;s not much that I have to show for it.
 
-I would appreciate if you are not a spam robot.</tw-passagedata><tw-passagedata pid="7" name="Some games I&#39;ve made" tags="" position="104,576" size="100,100">**As Perro Electrico**
+**As Perro Electrico**
 [[FLIP|https://perroelectrico.com/flip]]
 [[Demondrian|https://github.com/seuribe/demondrian]] (never released commercially).
 
@@ -52,8 +67,8 @@ Another Clojure experiment: [[Road|https://perroelectrico.com/road/]]. I was mor
 [[Nave Espacial 2.5b|https://www.myabandonware.com/game/nave-espacial-47u]] (DOS, made in 1994, working online thanks to some anonymous soul and the magic of javascript)
 
 **Other**
-Like any other person who ever made (or tried to make) games, there&#39;s a huge cementery of failed prototypes, experiments and half-baked ideas. I&#39;ll add more links if I find them!</tw-passagedata><tw-passagedata pid="8" name="Some talks I&#39;ve given" tags="" position="734,549" size="100,100">**Recent stuff:**
-[[A rant|https://www.youtube.com/watch?v=yT_gzFnKlro]] based on my [[Wolf Manifest-&gt;Things in which I participate]]
+Like any other person who ever made (or tried to make) games, there&#39;s a huge cementery of failed prototypes, experiments and half-baked ideas. I&#39;ll add more links if I find them!</tw-passagedata><tw-passagedata pid="8" name="Some talks I&#39;ve given" tags="" position="536,550" size="100,100">**Recent stuff:**
+[[A rant|https://www.youtube.com/watch?v=yT_gzFnKlro]] based on my [[Wolf Manifest-&gt;Some things I&#39;ve written]]
 
 I was somewhat of a &#39;Resident speaker&#39; at the [[Civic Game Jam|http://civicgamejam.com/]], which I also helped organize. My talks focused on the connection between games and the topic at hand (civics, humans, nature, machines), and attempted to raise interesting questions for developers.
 
@@ -65,14 +80,28 @@ At the [[EVA|http://www.expoeva.com/]] 2003 I gave a talk on development of Mobi
 [[Wolf in Games Clothing: a manifest|https://wolfingamesclothing.wordpress.com/]] Game developers should think what message they want people to get from their games not only through content, but also game mechanics and worldview.
 
 [[Fossil Free Games|https://fossilfree.games/]] and associated twitter account. Main ideologist.
-</tw-passagedata><tw-passagedata pid="10" name="Other projects where I programmed stuff" tags="" position="415,528" size="100,100">**Some selected projects**
+</tw-passagedata><tw-passagedata pid="10" name="Other projects where I programmed stuff" tags="" position="771,505" size="100,100">**Some selected projects**
 
 [[Projected Memory|http://www.projectedmemory.org/]]
 *&quot;a nonprofit initiative to enable and encourage individuals to reflect on the meaning of their visits to memorials and museums&quot;*. The software ran (runs?) in a specially tailored booth in the [[Sachsenhausen Memorial Centre and Museum|https://www.visitberlin.de/en/gedenkstatte-sachsenhausen]], in Berlin. It was developed in Java and encodes video in HD in real time using FFMPEG. [[Github link|https://github.com/seuribe/truthbooth]]
 
 When I moved to Berlin, I developed an Android app for practicing German. It had some grammar rules for the language encoded, and could produce grammatically correct (although sometimes non-sensical) sentences and remove some word, generating then &#39;fill in the blanks&#39; style exercises. I removed it from the store some time ago, but the source code is [[available online|https://github.com/seuribe/germangrammarapp]]. It&#39;s not the best code I&#39;ve done, as I was learning Android at the same time.
 
-I like the LISP family of languages, so I developed [[my own interpreter for Scheme|https://github.com/seuribe/uscheme]] in C#, with the objective of using it inside my Unity 3D projects. So far I have not done it, but the interpreter works.</tw-passagedata></tw-storydata>
+I like the LISP family of languages, so I developed [[my own interpreter for Scheme|https://github.com/seuribe/uscheme]] in C#, with the objective of using it inside my Unity 3D projects. So far I have not done it, but the interpreter works.</tw-passagedata><tw-passagedata pid="11" name="Academic Background" tags="" position="835,184" size="100,100">**Studies**
+I studied computer science at the School of Exact and Natural Sciences, University of Buenos Aires, between 1997 and 2011. I got an intermediate degree of *Analista Universitario en Ciencias de la Computación* (a kind of BS in Computer Science) in 2003 and stopped studying for five years, focusing instead on [[my company-&gt;My Business and Industry Background]]. Later I resumed to get my *Licenciatura* (roughly equivalent to a *Master*, but more like a *Diploma*).
+My [[thesis|https://drive.google.com/open?id=0B7I0asTDiZsrMkt4bENWUDFLcEE]] was about training game NPCs using Reinforcement Learning.
+
+**Teaching**
+While studying, I was for a couple years a *student teaching assistant* in the Algorithms and Data Structures I course, also at the
+
+In 2005, I tought Mobile Games Fevelopment, using [[J2ME|https://en.wikipedia.org/wiki/Java_Platform,_Micro_Edition]], at the [[Image Campus|https://www.imagecampus.edu.ar/]] Institute, also in Buenos Aires.
+
+In 2007 I started working at the [[Buenos Aires Instute of Technology|https://www.itba.edu.ar/]], first as a teaching assistant in Computer Graphics, later as the Director of the Videogames and Animation Center, and as an Assistant Lecturer. While there, I created the first postgraduate studies in Videogames in Argentina, hosted the [[ECIMAG 2011|http://www.ecimag.org/ediciones-previas/ecimag-2011/]], and co-organized two editions of WAVi, the Argentine Symposium on Videogames. I also directed some Engineering Degree Master Thesis, mainly involving computer graphics and motion capture. I left the ITBA when I moved to Berlin.</tw-passagedata><tw-passagedata pid="12" name="My Business and Industry Background" tags="" position="891,334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Read This First" tags="" position="74,69" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="Some things I&#39;ve written" tags="" position="264,542" size="100,100">[[The Wolf Manifest|http://wolfingamesclothing.wordpress.com]], about how Games could and *should* be used in a better way.
+
+[[Civic Games: Three perspectives|https://wolfingamesclothing.wordpress.com/civic-games-three-perspectives/]]
+An opinion piece for the Civic Game Jam.
+
+</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,i=!1,o=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){i=!0,o=e}finally{try{!r&&s.return&&s.return()}finally{if(i)throw o}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
