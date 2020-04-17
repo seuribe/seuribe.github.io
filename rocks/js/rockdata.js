@@ -119,17 +119,19 @@ function writeRocks() {
     var data = rocks[index];
     const template = `<article class="rock-article cf">
   <img class="rock-image" src="${data.imageurl}">
-  <div class="fl w-50 ph4 pv2">
+  <div class="flex-wrap w-100-l w-80">
+  <div class="fl w-50-l ph4 pv2">
     <div class="label pv1 ph3">
-      <p class="english f4 courier">${data.left.english}</p>
-      <p class="german f4 courier">${data.left.german}</p>
+      <p class="english f5 f4-l courier">${data.left.english}</p>
+      <p class="german f5 f4-l courier">${data.left.german}</p>
     </div>
   </div>
-  <div class="fl w-50 ph4 pv2">
+  <div class="fl w-50-l ph4 pv2">
     <div class="label pv1 ph3">
-      <p class="english f4 courier">${data.right.english}</p>
-      <p class="german f4 courier">${data.right.german}</p>
+      <p class="english f5 f4-l courier">${data.right.english}</p>
+      <p class="german f5 f4-l courier">${data.right.german}</p>
     </div>
+  </div>
   </div>
   </article>
   <br>
@@ -145,7 +147,7 @@ function writePortraits() {
     <div class="w-50-l">
       <img class="portrait-image mv2" src="${data.imageurl}">
     </div>
-    <div class="portrait-plaque w-50-l ph5 pv3">
+    <div class="portrait-plaque w-50-l w-40 ph5 pv3">
       <p class="f2 serif pv0 mv0">${data.title}</p>
       <p class="serif f4 lh-copy tj">${data.text}</p>
       <p class="serif f5 tr i">- ${data.reference}</p>
