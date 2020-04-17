@@ -1,0 +1,30 @@
+body {
+  padding: 1vh 1vw 1vh 1vh;
+}
+
+.rock-text-left {
+}
+
+.label {
+  background-color: #ead295;
+}
+
+.english {
+  color: #d54624;
+}
+
+.german {
+  color: #d54624;
+}
+
+a {
+  color: white;
+  font-family: courier;
+  background-color: black;
+  padding: 0.5em;
+  border-radius: 0.2em;
+}
+
+a:hover {
+  background-color: violet;
+}
