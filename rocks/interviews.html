@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/tachyons.min.css">
+  <link rel="stylesheet" href="css/default.css">
+  <script src="js/rockdata.js"></script>
+  <body class="serif pa4">
+    <h1 class="f3 f2-m f1-l fw2 mv2">Interviews</h1>
+    <div class="w-100">
+      <p class="courier f4">
+        Unfortunately the audio from this interview is lost. Please make sure that the Close Caption subtitles are enabled before starting the video.
+      </p>
+      <div id="frame_container" class="w-100" style="overflow: hidden;margin: auto;">
+      <iframe id="video_frame" src="https://player.vimeo.com/video/357827504?texttrack=en" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      </div>
+      <script>
+        var videoFrame = document.getElementById("video_frame");
+        var container = document.getElementById("frame_container");
+        function resizeIFrame() {
+          videoFrame.width = Math.floor(container.offsetWidth );
+          videoFrame.height = Math.ceil((videoFrame.width / 16) * 9);
+        }
+        window.onresize = resizeIFrame;
+        window.onload = resizeIFrame;
+      </script>
+      <a href="index.html">Back</a>
+  </body>
+</html>
