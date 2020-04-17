@@ -119,14 +119,14 @@ function writeRocks() {
     var data = rocks[index];
     const template = `<article class="rock-article cf">
   <img class="rock-image" src="${data.imageurl}">
-  <div class="flex-wrap w-100-l w-80">
-  <div class="fl w-50-l ph4 pv2">
+  <div class="flex-wrap w-100-l w-100">
+  <div class="fl w-50-l w-100 ph4-l ph1 pv2-l pv1">
     <div class="label pv1 ph3">
       <p class="english f5 f4-l courier">${data.left.english}</p>
       <p class="german f5 f4-l courier">${data.left.german}</p>
     </div>
   </div>
-  <div class="fl w-50-l ph4 pv2">
+  <div class="fl w-50-l w-100 ph4-l ph1 pv2-l pv1">
     <div class="label pv1 ph3">
       <p class="english f5 f4-l courier">${data.right.english}</p>
       <p class="german f5 f4-l courier">${data.right.german}</p>
