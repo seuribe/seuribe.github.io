@@ -147,7 +147,7 @@ function writePortraits() {
     <div class="w-50-l">
       <img class="portrait-image mv2" src="${data.imageurl}">
     </div>
-    <div class="portrait-plaque w-50-l w-40 ph5 pv3">
+    <div class="portrait-plaque w-50-l w-100 ph5-l pv3">
       <p class="f2 serif pv0 mv0">${data.title}</p>
       <p class="serif f4 lh-copy tj">${data.text}</p>
       <p class="serif f5 tr i">- ${data.reference}</p>
