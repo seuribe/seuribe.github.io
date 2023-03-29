@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title>Faceliza</title>
+    <link href="faceliza.css" rel="stylesheet" type="text/css"/>
+	<script language="JavaScript" TYPE="text/javascript" SRC="facelizabot.js"></script>
+	<script language="JavaScript" TYPE="text/javascript" SRC="facelizadata.js"></script>
+	<meta charset="UTF-8"> 	
+<script language="JavaScript" TYPE="text/javascript">
+<!--
+
+var eliza = new ElizaBot();
+
+var ads = [
+["baby","ghost", "virtual"],
+["beauty","lips","perfect"],
+["cute","chicks"],
+["dating","gaga", "lady"],
+["disease","std","chihuaha","dog"],
+["home","lock","pick","dream"],
+["independent","horse","car","drive"],
+["talk","language","tutor","hate","blue"],
+["success","kid","successful","luck"],
+["peace","war","terror","fight","combat","orange","guns"]
+];
+
+function splitText(text) {
+	text=text.toLowerCase();
+	text=text.replace(/@#\$%\^&\*\(\)_\+=~`\{\[\}\]\|:;<>\/\\\t/g, ' ');
+	text=text.replace(/\s+-+\s+/g, ' ');
+	text=text.replace(/\s*[,\.\?!;]+\s*/g, ' ');
+	text=text.replace(/\s*\bbut\b\s*/g, ' ');
+	text=text.replace(/\s{2,}/g, ' ');
+	// split text in part sentences and loop through them
+	var parts=text.split(' ');
+	return parts;
+}
+
+function findAd(text) {
+	var words = splitText(text);
+	for (i = 0; i < words.length; i++) {
+		var word = words[i];
+		for (j = 0 ; j < ads.length ; j++) {
+			if (ads[j].indexOf(word) != -1)
+				return ads[j][0];
+		}
+	}	
+	return null;
+}
+
+function elizaReset() {
+	eliza.reset();
+	greet();
+}
+
+function elizaStep() {
+	var inputField = document.forms.talk_form.e_input;
+
+	if (inputField.value != '')
+		processInput(inputField.value);
+	
+	inputField.value = '';
+	inputField.focus();
+	return false;
+}
+
+function processInput(userinput) {
+	var reply = eliza.transform(userinput);
+	var waitTime = 500 + 1000 * Math.log10(userinput.length);
+	appendUser(userinput, 'user');
+	delayedReply(reply, waitTime);
+	var ad = findAd(userinput);
+	if (ad != null)
+		setTimeout( function() { appendAd(ad); }, waitTime + 1000);
+}
+
+function delayedReply(reply, delay) {
+	setTimeout( function() {
+		var replyDiv = appendFaceliza("...");
+		setTimeout( function() { updateFaceliza(replyDiv, reply);}, delay);
+	}, 500);
+}
+
+function greet() {
+	appendFaceliza(eliza.getInitial());
+}
+
+function appendAd(word) {
+	appendChatDiv('<div class="faceliza_ad"><img src="ads/' + word + '.png"></div>');
+}
+
+function appendUser(text) {
+	return appendChatDiv('<div class="user">' + text + '</div>');
+}
+
+function appendFaceliza(text) {
+	return appendChatDiv('<div class="faceliza"><img align="left" src="images/faceliza_pic.png"><div>' + text + '</div></div>');
+}
+
+function updateFaceliza(replyDiv, text) {
+	replyDiv.firstChild.nextSibling.innerText = text;
+	scrollDown();
+}
+
+function appendChatDiv(divHTML) {
+	var chatarea = document.getElementById('chatarea');
+	chatarea.innerHTML += divHTML;
+	scrollDown();
+	return chatarea.lastChild;
+}
+
+function scrollDown() {
+	var scrollable = document.getElementById('scrollable');
+	scrollable.scrollTop = scrollable.scrollHeight;
+}
+
+function checkEnter(event) {
+    if (event.which == 13 || event.keyCode == 13) {
+		elizaStep();
+		return false;
+	}
+	return true;
+}
+
+//-->
+</script>
+</head>
+<body onload="greet();">
+<a name="top"></a>
+<div class="topbar">
+Faceliza
+</div>
+<div class="session" id="session">
+	<div class="box">
+		<div class="scrollable" id="scrollable">
+			<div id="chatarea"></div>
+			</div>
+	</div>
+	<form id="talk_form">
+		<div class="inputline">
+			<input type="text" class="inputtext" name="e_input" onkeypress="return checkEnter(event);">
+			<input type="button" class="inputbutton" value="&nbsp;Talk&nbsp;" onclick="return elizaStep();">
+		</div>
+	</form>
+</div>
+
+<div class="footer">
+Faceliza - The meaninfully connected chatbot<br/>
+ELIZA Original program by Joseph Weizenbaum | Faceliza code based on Javascript implementation by <a href="http://www.masserk.at">Norbert Landsteiner</a><br/>
+Psychologist Icon made by Freepik from <a href="http://www.flaticon.com">www.flaticon.com</a>
+</div>
+</body>
+</html>
